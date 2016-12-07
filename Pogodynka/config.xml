@@ -105,4 +105,5 @@ UZO</description>
   <platform name="wp8">
     <splash src="res/screens/wp8/SplashScreenImage.jpg" width="480" height="800" />
   </platform>
+  <vs:plugin name="cordova-plugin-geolocation" version="2.4.0" />
 </widget>
