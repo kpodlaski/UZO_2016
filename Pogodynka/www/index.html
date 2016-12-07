@@ -14,12 +14,49 @@
     <link href="css/index.css" rel="stylesheet" />
 </head>
 <body>
-    <p>Hello, your application is ready!</p>
+    <div data-role="page" id="weather-page">
+        <div data-role="header" class="header ui-bar-a">
+            <div id="app-title" class="naglowek"> Pogodynka </div>
+        </div>
 
-    <!-- Cordova reference, this is added to your app when it's built. -->
-    <script src="cordova.js"></script>
-    <script src="scripts/platformOverrides.js"></script>
+        <div role="main" class="ui-content">
+            <form>
+                <label for="zip-code">Podaj kod pocztowy:</label>
+                <input id="kodPocztowy-input" name="kodPocztowy-input" placeholder="90-236" class="ui-corner-all" required />
+                <button id="pobierz-pogode-btn" data-role="button" class="ui-btn ui-btn-corner-all ui-icon-search ">Pokaż pogodę</button>
+                <button id="pogoda-gps-btn" data-role="button" class="ui-btn ui-btn-corner-all ui-icon-search ">Pogoda (GPS)</button>
+            </form>
+            <div id="pogoda-data" name="pogoda-data" class="ui-corner-all ui-shadow ukryte">
+                <span id="nazwa" class="ui-bar ui-bar-a "></span>
+                <table>
+                    <tr>
+                        <td>
+                            <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ">
+                                <li>Temp:<span id="temperatura"></span> C <img src="" /></li>
+                                <li>Ciśnienie: <span id="cisnienie"></span>hPa</li>
+                                <li>Wiatr: <span id="wiatr"></span> km/h</li>
+                                <li>Wilgotność: <span id="wilgotnosc"></span> %</li>
+                                <li>Wschód słońca: <span id="wschod"></span></li>
+                                <li>Zachód słońca: <span id="zachod"></span></li>
+                            </ul>
+                        </td>
+                        <td>
+                            <span><img src="" id="pogoda-icon" name="pogoda-icon" /> </span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="error-msg" class="ukryte"></div>
+        </div>
 
-    <script src="scripts/index.js"></script>
+        <footer class="stopka" data-role="footer" data-position="fixed">
+            <h4><a href="http:\\www.wfis.uni.lodz.pl">Warsztaty: Aplikacje Mobilne WFiIS UŁ</a></h4>
+        </footer>
+
+        <!-- Cordova reference, this is added to your app when it's built. -->
+        <script src="cordova.js"></script>
+        <script src="scripts/platformOverrides.js"></script>
+
+        <script src="scripts/index.js"></script>
 </body>
 </html>
