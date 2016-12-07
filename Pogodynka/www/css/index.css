@@ -1,2 +1,47 @@
-﻿body {
+﻿.ukryte {
+    display: none;
 }
+
+.naglowek{
+    height: 40px;
+    
+}
+#app-title{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#start-icon{
+    height:40px;
+position: relative !important;
+
+}
+.stopka{
+    font-size: 12px;
+    text-align: center;
+}
+
+form {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+#kodPocztowy-input {
+    font-size: 25px;
+    width:100%;
+}
+
+#pobierz-pogode-btn {
+    font-size: 16px;
+}
+
+
+
+
+#error-msg {
+    text-align: center;
+    margin-top:  50%;
+    font-weight: bold;    
+}
+
