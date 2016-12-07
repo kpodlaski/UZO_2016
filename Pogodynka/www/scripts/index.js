@@ -23,5 +23,7 @@
         // TODO: This application has been reactivated. Restore application state here.
     };
     $('#pobierz-pogode-btn').click(pogodaKodPocztowy);
+    $('#pogoda-gps-btn').click(pogodaGPS);
+
 
 } )();
